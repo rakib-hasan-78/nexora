@@ -38,7 +38,7 @@
     @apply w-full h-full scroll-smooth;
   }
   body{
-    @apply w-full min-h-full font-sans;
+    @apply w-full min-h-full font-sans capitalize;
   }
   img{
     @apply w-full h-full object-cover align-middle;
