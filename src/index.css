@@ -29,6 +29,8 @@
   --breakpoint-2xl: 80rem;
   --breakpoint-3xl: 90rem;
 
+
+
 }
 @layer base {
   *{
@@ -45,6 +47,12 @@
   }
 
 }
-/* @layer components{
+@layer components{
+  .primary-bg-gradient {
+    @apply bg-gradient-to-r from-zinc-500 via-stone-400 to-slate-500;
+  }
 
-} */
+  .link-btn{
+    @apply px-8 py-3.5 text-neutral-200 font-bold text-lg rounded-xl;
+  }
+}

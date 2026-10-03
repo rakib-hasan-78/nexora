@@ -4,6 +4,8 @@ import Logo from "./../../basic/Logo/Logo";
 import Slogan from "./../../basic/Slogan/Slogan";
 import NewsDate from "../../basic/NewsDate/NewsDate";
 import ScrollElement from './../../basic/ScrollElement/ScrollElement';
+import PrimaryNav from './../../basic/PrimaryNav/PrimaryNav';
+import AuthenticationNav from './../../basic/AuthenticationNav/AuthenticationNav';
 
 const Header = () => {
   return (
@@ -31,6 +33,15 @@ const Header = () => {
       <div className="w-9/12 flex items-center border-slate-700/60  shadow-2xl">
         <ScrollElement />
       </div>  
+      {/* nav section */}
+      <div className="w-9/12 h-20 flex items-center justify-end my-6 text-sm">
+      <nav className="w-5/12 h-20 py-2 flex items-center p-1 text-neutral-700/65 font-light">
+        <PrimaryNav />
+      </nav>
+      <nav className="w-3/12 h-20 flex items-center justify-end">
+        <AuthenticationNav />
+      </nav>
+      </div>
     </div>
   );
 };

@@ -5,7 +5,7 @@ const ScrollElement = () => {
   return (
     <div className="w-full flex items-start rounded-xl">
       <div
-        className="w-2/12 bg-gradient-to-r from-zinc-500 via-stone-400 to-slate-500 py-3.5 uppercase text-slate-200 rounded-l-xl flex items-center justify-end
+        className="primary-bg-gradient w-2/12 py-3.5 uppercase text-slate-200 rounded-l-xl flex items-center justify-end
             font-black text-2xl pr-4 space-x-3"
       >
         <h1>latest</h1>
