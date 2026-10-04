@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./../../components/shared/Header/Header";
+import Footer from './../../components/shared/Footer/Footer';
 
 const MainLayout = () => {
   return (
@@ -11,6 +12,7 @@ const MainLayout = () => {
       </div>
       <span>2</span>
       <span>3</span>
+      <Footer />
     </div>
   );
 };
