@@ -1,17 +1,24 @@
 import React from 'react';
 import CTA from './../../basic/CTA/CTA';
+import FooterLinks from './../../basic/FooterLinks/FooterLinks';
+import Copyright from './../../basic/Copyright/Copyright';
 
 const Footer = () => {
     return (
-        <div className='bg-linear-to-tl from-zinc-800 via-gray-700 to-slate-800 pt-6'>
-        <div className='w-9/12 mx-auto pt'>
+        <footer className='bg-linear-to-tl from-zinc-800 via-gray-700 to-slate-800 pt-6'>
+        <section className='w-9/12 mx-auto pt'>
         <CTA />
-        </div>
-        <div className='py-6'>
-            baaano
-        </div>
+        </section>
+        <section className='w-9/12 mx-auto'>
+        <FooterLinks />
+        </section>
+        <section className='w-9/12 mx-auto border-t rounded-full border-slate-500/70'>
+        </section>
+        <section>
+            <Copyright />
+        </section>
             
-        </div>
+        </footer>
     );
 };
 

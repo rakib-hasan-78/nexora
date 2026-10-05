@@ -23,7 +23,7 @@ const CTA = () => {
                     </div>
                 </form>
             </div>
-            <div className='w-full border-t rounded-full border-slate-600 mt-6'>
+            <div className='w-full border-t rounded-full border-slate-500/70 mt-6'>
             </div>
         </div>
     );
