@@ -1,11 +1,16 @@
-import React from 'react';
+import React from "react";
 
 const Copyright = () => {
-    return (
-        <div className='font-gothic uppercase'>
-            <h1 className='text-center uppercase text-white'>N NEXORA</h1>
-        </div>
-    );
+  return (
+    <section className="footer sm:footer-horizontal footer-center text-base-content p-4 py-6 text-slate-200">
+      <aside>
+        <p>
+          Copyright © {new Date().getFullYear()} - All right reserved by
+          Nexora INC.
+        </p>
+      </aside>
+    </section>
+  );
 };
 
 export default Copyright;

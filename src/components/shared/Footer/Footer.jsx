@@ -2,6 +2,7 @@ import React from 'react';
 import CTA from './../../basic/CTA/CTA';
 import FooterLinks from './../../basic/FooterLinks/FooterLinks';
 import Copyright from './../../basic/Copyright/Copyright';
+import FooterLargeImage from './../../basic/FooterLargeImage/FooterLargeImage';
 
 const Footer = () => {
     return (
@@ -14,8 +15,13 @@ const Footer = () => {
         </section>
         <section className='w-9/12 mx-auto border-t rounded-full border-slate-500/70'>
         </section>
-        <section>
+        <section className='w-9/12 mx-auto'>
             <Copyright />
+        </section>
+        <section className='w-9/12 mx-auto'>
+          <div>
+            <FooterLargeImage />
+          </div>  
         </section>
             
         </footer>
