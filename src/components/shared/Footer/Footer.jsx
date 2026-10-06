@@ -6,7 +6,7 @@ import FooterLargeImage from './../../basic/FooterLargeImage/FooterLargeImage';
 
 const Footer = () => {
     return (
-        <footer className='bg-linear-to-tl from-zinc-800 via-gray-700 to-slate-800 pt-6'>
+        <div className='bg-linear-to-tl from-zinc-800 via-gray-700 to-slate-800 pt-6'>
         <section className='w-9/12 mx-auto pt'>
         <CTA />
         </section>
@@ -24,7 +24,7 @@ const Footer = () => {
           </div>  
         </section>
             
-        </footer>
+        </div>
     );
 };
 
