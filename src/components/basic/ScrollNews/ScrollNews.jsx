@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 const ScrollNews = () => {
     const scrollData = use(data);
     const breakingNews = scrollData.filter(item=>item.others.is_today_pick)
-    console.log(breakingNews);
+    
     
     return (
         <div className='w-full h-auto bg-gradient-to-r from-zinc-700 via-stone-600 to-slate-700 rounded-r-xl pr-4'>

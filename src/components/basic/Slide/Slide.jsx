@@ -1,6 +1,7 @@
 import React from "react";
 import demo from '../../../assets/demo-card-thumbnail.png';
-const Slide = () => {
+const Slide = ({data}) => {
+  // const {author} =data
   return (
     <div className="relative h-[500px] overflow-hidden rounded-2xl">
       {/* GREEN PANEL */}
@@ -18,7 +19,7 @@ const Slide = () => {
         <div className="flex h-full items-center px-14">
           <div className="max-w-md text-white">
             <p className="text-xs tracking-[0.2em]">
-              FIND AN NFL FLAG LEAGUE NEAR YOU!
+              Author: {data.author.name}
             </p>
 
             <h2 className="mt-3 text-4xl font-bold">CRUISE TO VICTORY</h2>
