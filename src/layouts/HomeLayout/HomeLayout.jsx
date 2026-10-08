@@ -15,8 +15,8 @@ const HomeLayout = () => {
     return (
         <div className='w-full flex flex-col justify-center items-center'>
         {/* sliders */}
-            <section className='w-10/12 grid grid-cols-12 gap-2'>
-                <div className='col-span-8'>
+            <section className='w-10/12 grid grid-cols-12 gap-4'>
+                <div className='col-span-7 rounded-2xl shadow-2xl'>
                 
                 <Suspense fallback={SliderSkeleton}>
                 <Swiper
@@ -44,9 +44,11 @@ const HomeLayout = () => {
                 }
                 </Swiper>
                 </Suspense>
-                    
                 </div>
-                <div className='col-span-4 bg-amber-500 py-1'></div>
+                {/*  */}
+                <div className='col-span-5 border bg-linear-to-tl from-gray-800 via-slate-700 to-zinc-800 rounded-xl shadow-2xl flex items-center justify-start'>
+                    <div className='w-10/12 border border-white/30 bg-white/5 backdrop-blur-md rounded-xl shadow-2xl relative overflow-hidden before:absolute before:inset-0 before:bg-linear-to-tl before:from-white/5 before:via-transparent before:to-white/10 p-3 text-slate-200'>glass</div>
+                </div>
             </section>
         </div>
     );

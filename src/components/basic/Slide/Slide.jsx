@@ -1,7 +1,8 @@
 import React from "react";
-import demo from '../../../assets/demo-card-thumbnail.png';
+import { Link } from "react-router";
+
 const Slide = ({data}) => {
-  // const {author} =data
+  const {author, title, details, thumbnail_url} =data
   return (
     <div className="relative h-[500px] overflow-hidden rounded-2xl">
       {/* GREEN PANEL */}
@@ -12,37 +13,40 @@ const Slide = ({data}) => {
             left-0
             z-20
             w-[55%]
-            bg-[#064e49]
+            bg-linear-to-tl from-stone-800 via-slate-700 to-zinc-700
             [clip-path:polygon(0_0,100%_4%,100%_100%,0_100%)]
         "
       >
-        <div className="flex h-full items-center px-14">
+        <div className="flex h-full items-center px-14 rounded-2xl">
           <div className="max-w-md text-white">
             <p className="text-xs tracking-[0.2em]">
-              Author: {data.author.name}
+              {author.name}
             </p>
 
-            <h2 className="mt-3 text-4xl font-bold">CRUISE TO VICTORY</h2>
+            <h2 className="mt-3 text-slate-300 text-4xl font-bold line-clamp-4">{title}</h2>
 
-            <p className="mt-3 text-sm leading-5">
-              Pop Warner is the world's largest youth football program. The
-              leagues teach young people fundamental values and skills and
-              foster a commitment to academic success.
-            </p>
+            <p className="mt-3 text-sm leading-5 line-clamp-2">
+              {details}
+            </p> <br />
 
-            <button
+            <Link
               className="
-                        mt-7
+                        mt-10
                         rounded-full
-                        bg-white
+                        bg-secondary/80
+                        hover:bg-secondary
+                        text-rose-200
+                        hover:text-rose-100
+                        ease-in-out
+                        delay-150
                         px-6
                         py-3
                         text-sm
-                        text-black
+                        border
                     "
             >
-              Read Detail →
-            </button>
+            Read Details 
+            </Link>
           </div>
         </div>
       </div>
@@ -59,7 +63,7 @@ const Slide = ({data}) => {
             [clip-path:polygon(0_5%,100%_0,100%_100%,0_100%)]
         "
       >
-        <img src={demo} alt="" />
+        <img src={thumbnail_url} alt="" />
       </div>
     </div>
   );
