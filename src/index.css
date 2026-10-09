@@ -72,4 +72,8 @@
   .link-btn{
     @apply px-8 py-3.5 text-neutral-200 font-bold text-lg rounded-xl;
   }
+  /* glassmorphism */
+  .glass-effect{
+    @apply  border border-white/30 bg-white/5 backdrop-blur-md rounded-xl shadow-2xl relative overflow-hidden before:absolute before:inset-0 before:bg-linear-to-tl before:from-white/5 before:via-transparent before:to-white/10 p-3 text-slate-200;
+  }
 }
