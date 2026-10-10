@@ -8,6 +8,7 @@ import { data } from '../../../public/allData/allData';
 import { Suspense } from 'react';
 import SliderSkeleton from '../../components/Skeletons/SliderSkeleton/SliderSkeleton';
 import { HiArrowLongLeft,  HiArrowLongRight  } from "react-icons/hi2";
+import NewsToast from './../../components/basic/NewsToast/NewsToast';
 
 const HomeLayout = () => {
     const newsData = use(data);
@@ -49,7 +50,9 @@ const HomeLayout = () => {
                 {/*  */}
                 <div className='col-span-6 border bg-linear-to-tl from-gray-800 via-slate-700 to-zinc-800 rounded-xl shadow-2xl flex flex-col items-center justify-start p-3'>
                     <div className='w-full flex items-center justify-between px-4 mt-8 pb-6'>
-                        <h2 className='text-slate-200 text-3xl font-bold'>latest news</h2>
+                        <h2 className='text-slate-200 text-3xl font-bold'>
+                            trendy news
+                        </h2>
                         <div className='text-2xl flex items-center justify-center space-x-3'>
                             <button className='cursor-pointer text-slate-300 hover:text-gray-500 transition-all ease-in delay-100'>
                             <HiArrowLongLeft />
@@ -60,7 +63,14 @@ const HomeLayout = () => {
                         </div>
                     </div>
                     <div className='grid grid-cols-2  gap-4 p-2'>
-                        
+                        <NewsToast />
+                        <NewsToast />
+                        <NewsToast />
+                        <NewsToast />
+                        <NewsToast />
+                        <NewsToast />
+                        <NewsToast />
+                        <NewsToast />
 
                     </div>
                 </div>
