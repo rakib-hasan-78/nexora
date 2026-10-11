@@ -58,9 +58,17 @@ const HomeLayout = () => {
                  />
                 </div>
             </section>
+            <div className='w-10/12 my-5 py-2 grid grid-flow-col items-center gap-3'>
+                {/* left aside */}
+                <aside className='col-span-3 py-2 border-4 flex items-center justify-center'>hello</aside>
+                <section className='col-span-6 border'></section>
+                {/* right aside */}
+                <aside className='col-span-3 py-2 border-4'></aside>
+            </div>
         </div>
     );
 };
 
 export default HomeLayout;
 
+ 
