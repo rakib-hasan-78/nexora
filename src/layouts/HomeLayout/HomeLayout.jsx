@@ -8,6 +8,7 @@ import { data } from '../../../public/allData/allData';
 import { Suspense } from 'react';
 import SliderSkeleton from '../../components/Skeletons/SliderSkeleton/SliderSkeleton';
 import DisplayNewsSection from './../../components/shared/DisplayNewsSection/DisplayNewsSection';
+import HomeLeftBar from './../../components/shared/HomeLeftBar/HomeLeftBar';
 
 
 
@@ -15,7 +16,8 @@ import DisplayNewsSection from './../../components/shared/DisplayNewsSection/Dis
 const HomeLayout = () => {
     const newsData = use(data);
     const sliderData = newsData.filter(data=>data.tags.includes("politics"));
-    const trendyNews = newsData.filter(data=>data.others.is_trending)
+    const trendyNews = newsData.filter(data=>data.others.is_trending);
+    
     
     return (
         <div className='w-full flex flex-col justify-center items-center'>
@@ -60,7 +62,9 @@ const HomeLayout = () => {
             </section>
             <div className='w-10/12 my-5 py-2 grid grid-flow-col items-center gap-3'>
                 {/* left aside */}
-                <aside className='col-span-3 py-2 border-4 flex items-center justify-center'>hello</aside>
+                <aside className='col-span-3 py-2 border-4 flex items-center justify-center'>
+                <HomeLeftBar newsData={newsData} />
+                </aside>
                 <section className='col-span-6 border'></section>
                 {/* right aside */}
                 <aside className='col-span-3 py-2 border-4'></aside>
