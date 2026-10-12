@@ -62,12 +62,12 @@ const HomeLayout = () => {
             </section>
             <div className='w-10/12 my-5 py-2 grid grid-flow-col items-center gap-3'>
                 {/* left aside */}
-                <aside className='col-span-3 py-2 border-4 flex items-center justify-center'>
+                <aside className='col-span-3 flex items-center justify-center'>
                 <HomeLeftBar newsData={newsData} />
                 </aside>
-                <section className='col-span-6 border'></section>
+                <section className='col-span-6 border'> hello world Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dolorem praesentium illo, corporis eveniet numquam!</section>
                 {/* right aside */}
-                <aside className='col-span-3 py-2 border-4'></aside>
+                <aside className='col-span-3 py-2 border-4'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, illo?</aside>
             </div>
         </div>
     );

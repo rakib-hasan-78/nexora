@@ -4,9 +4,9 @@ const customSort =(data, key)=>{
             key.split('.').reduce((value, property)=>value?.[property], data)
 
         if (getValue(a)>getValue(b)) {
-            return 1
-        } else if (getValue(a)< getValue(b)){
             return -1
+        } else if (getValue(a)< getValue(b)){
+            return 1
         } else {
             return 0
         }
