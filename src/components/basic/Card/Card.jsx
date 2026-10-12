@@ -11,7 +11,7 @@ const Card = ({ data }) => {
     <div className="w-full  flex flex-col items-center justify-center px-2 ">
       {/* card header */}
       <div className="w-full flex items-center justify-between glass-effect rounded-b-none">
-        <div className="w-5/12 flex items-center justify-start space-x-2 z-30">
+        <div className="w-7/12 flex items-center justify-start space-x-2 z-30">
           <div className="w-1/5 rounded-full overflow-hidden">
             <img
               src={author.img || demoImage}
@@ -24,7 +24,7 @@ const Card = ({ data }) => {
             <p>{date.toLocaleDateString("en-GB")}</p>
           </div>
         </div>
-        <div className="w-5/12 flex items-center justify-end z-30">
+        <div className="w-3/12 flex items-center justify-end z-30">
           <button className="btn btn-circle bg-transparent border-none shadow-none text-stone-300 cursor-pointer">
             <CiBookmark />
           </button>
