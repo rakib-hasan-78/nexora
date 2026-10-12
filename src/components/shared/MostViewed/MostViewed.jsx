@@ -4,9 +4,11 @@ import customSort from "../../../customSort/customSort";
 import Card from "../../basic/Card/Card";
 import SidebarSkeleton from "../../Skeletons/SidebarSkeleton/SidebarSkeleton";
 
-const MostViewed = () => {
+
+const MostViewed = ({tab}) => {
   const mainData = use(data);
   const mostViewedData = customSort(mainData, "total_view");
+  const topRatedData = customSort(mainData, "rating.number");
   return (
     <div
       className="w-full py-3 max-h-150 overflow-y-auto
@@ -14,9 +16,14 @@ const MostViewed = () => {
     >
     <Suspense fallback={SidebarSkeleton}>
 
-      {mostViewedData.map((item) => (
+      {tab==='mostRead'&& mostViewedData.map((item) => (
         <Card key={item.id} data={item} />
       ))}
+      {
+        tab==='topRated' && topRatedData?.map(item=>(
+          <Card key={item.id} data={item} />
+        ))
+      }
     </Suspense>
     </div>
   );

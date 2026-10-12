@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import MostViewed from './../MostViewed/MostViewed';
-import TopRated from '../TopRated/TopRated';
-
 
 const HomeLeftBar = () => {
     const [tab, setTab] = useState('mostRead');
@@ -13,13 +11,8 @@ const HomeLeftBar = () => {
                 <button onClick={()=>setTab('topRated')} className='btn'>top rated news</button>
             </div>
             {
-                tab === 'mostRead'&&
-                <MostViewed />
-            }
-            {
-                tab==='topRated'&&
-                <TopRated />
-            }           
+                <MostViewed tab={tab} />
+            }         
         </div>
     );
 };
