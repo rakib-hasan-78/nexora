@@ -10,9 +10,9 @@ import SliderSkeleton from "../../components/Skeletons/SliderSkeleton/SliderSkel
 import DisplayNewsSection from "./../../components/shared/DisplayNewsSection/DisplayNewsSection";
 import HomeLeftBar from "./../../components/shared/HomeLeftBar/HomeLeftBar";
 import addSection from "../../../src/assets/bg.png";
-import RightAside from "./../../components/shared/RightAside/RightAside";
 import MainContent from './../../components/shared/MainContent/MainContent';
 import classroom from '../.././assets/class.png';
+import AsideLogin from './../../components/shared/AsideLogin/AsideLogin';
 
 const HomeLayout = () => {
   const newsData = use(data);
@@ -49,22 +49,19 @@ const HomeLayout = () => {
           />
         </div>
       </section>
-      <div className="w-10/12 my-5 py-2 grid grid-flow-col items-start gap-3">
+      <div className="w-10/12 my-5 py-2 grid grid-cols-12 items-start gap-3">
         {/* left aside */}
-        <aside className="col-span-1 min-h-full  flex flex-wrap items-center justify-start gap-3 border py-8">
+        <aside className="col-span-4 min-h-full  flex flex-wrap items-center justify-start gap-3 py-8">
+          <AsideLogin />
           <HomeLeftBar />
           <div><img src={classroom} alt="" /></div>
           <div className="w-10/12 overflow-hidden rounded-2xl shadow-2xl">
           <img src={addSection} alt="add-section" />
           </div>
         </aside>
-        <section className="col-span-8 border py-8">
+        <section className="col-span-8 py-8">
           <MainContent />
         </section>
-        {/* right aside */}
-        <aside className="col-span-2 min-h-full py-8">
-          <RightAside />
-        </aside>
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ const Card = ({ data }) => {
   const { title, thumbnail_url, author, details, rating, total_view } = data;
   const date = new Date(author.published_date);
   return (
-    <div className="w-full  flex flex-col items-center justify-center px-2 ">
+    <div className="w-full h-125  flex flex-col items-center justify-center px-2 ">
       {/* card header */}
       <div className="w-full flex items-center justify-between glass-effect rounded-b-none">
         <div className="w-7/12 flex items-center justify-start space-x-2 z-30">
@@ -34,7 +34,7 @@ const Card = ({ data }) => {
         </div>
       </div>
       {/* card body */}
-      <div className="w-full flex flex-col items-center justify-start content-start  bg-white/5 backdrop-blur-md  shadow-2xl relative overflow-hidden before:absolute before:inset-0 before:bg-linear-to-tl before:from-fuchsia-900/5 before:via-transparent before:to-orange-700/10 p-3 text-slate-200 rounded-t-none rounded-2xl border border-white/30">
+      <div className="w-full flex flex-col items-center justify-start content-start  bg-violet-500/5 backdrop-blur-md  shadow-2xl relative overflow-hidden before:absolute before:inset-0 before:bg-linear-to-tl before:from-fuchsia-900/5 before:via-transparent before:to-rose-700/10 p-3 text-slate-200 rounded-t-none rounded-2xl border border-white/30">
       {/* title */}
         <div className="w-full z-30">
             <h3 className="font-bold line-clamp-2 pr-10 text-xl">{title}</h3>
