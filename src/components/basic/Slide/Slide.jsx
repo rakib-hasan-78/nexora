@@ -17,15 +17,15 @@ const Slide = ({data}) => {
             [clip-path:polygon(0_0,100%_4%,100%_100%,0_100%)]
         "
       >
-        <div className="flex h-full items-center px-14 rounded-2xl">
+        <div className="flex h-full items-center 3xs:px-1.5 lg:px-14 rounded-2xl">
           <div className="max-w-md text-white">
-            <p className="text-xs tracking-[0.2em]">
+            <p className="3xs:text-[7px] lg:text-xs tracking-[0.2em]">
               {author.name}
             </p>
 
-            <h2 className="mt-3 text-slate-300 text-4xl font-bold line-clamp-4">{title}</h2>
+            <h2 className="mt-3 text-slate-300 3xs:text-xl lg:text-4xl font-bold  3xs:line-clamp-3 lg:line-clamp-4">{title}</h2>
 
-            <p className="mt-3 text-sm leading-5 line-clamp-2">
+            <p className="mt-3 text-sm leading-5 3xs:line-clamp-2 lg:line-clamp-2">
               {details}
             </p> <br />
 
@@ -41,8 +41,10 @@ const Slide = ({data}) => {
                         delay-150
                         px-6
                         py-3
-                        text-sm
+                        3xs:text-[9px]
+                        lg:text-sm
                         border
+                        
                     "
             >
             Read Details 
