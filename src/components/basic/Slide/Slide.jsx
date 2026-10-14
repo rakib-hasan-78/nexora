@@ -65,7 +65,7 @@ const Slide = ({data}) => {
             [clip-path:polygon(0_5%,100%_0,100%_100%,0_100%)]
         "
       >
-        <img src={thumbnail_url} alt="" />
+        <img src={thumbnail_url} alt="thumbnail_image_url" />
       </div>
     </div>
   );

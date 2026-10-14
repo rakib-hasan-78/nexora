@@ -14,8 +14,8 @@ const DisplayNewsSection = ({ sectionTitle, newsData }) => {
 
   return (
     <div>
-      <div className="w-full flex items-center justify-between px-4 mt-8 pb-6">
-        <h2 className="text-slate-200 text-3xl font-bold">{sectionTitle}</h2>
+      <div className="w-full flex items-center justify-between 3xs:px-2 lg:px-4 mt-8 pb-6">
+        <h2 className="text-slate-200 3xs:text-sm lg:text-3xl 3xs:font-medium lg:font-bold">{sectionTitle}</h2>
         <div className="text-2xl flex items-center justify-center space-x-3">
         {
             page > 1 &&
@@ -38,7 +38,7 @@ const DisplayNewsSection = ({ sectionTitle, newsData }) => {
         }
         </div>
       </div>
-      <div className="grid grid-cols-2  gap-4 p-2">
+      <div className="grid 3xs:grid-cols-1  lg:grid-cols-2  gap-4 p-2">
       {
         totalItems.map(item=>(
             <NewsToast 

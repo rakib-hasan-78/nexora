@@ -22,7 +22,7 @@ const HomeLayout = () => {
   return (
     <div className="w-full flex flex-col justify-center items-center">
       {/* sliders */}
-      <section className="3xs:w-full lg:w-10/12 grid grid-cols-12 lg:gap-4">
+      <section className="3xs:w-full lg:w-10/12 grid grid-cols-12 gap-4">
         <div className="3xs:col-span-12 lg:col-span-6 rounded-2xl shadow-2xl">
           <Suspense fallback={SliderSkeleton}>
             <Swiper
@@ -42,7 +42,7 @@ const HomeLayout = () => {
           </Suspense>
         </div>
         {/*  */}
-        <div className="col-span-6 border bg-linear-to-tl from-gray-800 via-slate-700 to-zinc-800 rounded-xl shadow-2xl flex flex-col items-center justify-start p-3">
+        <div className="3xs:col-span-12 lg:col-span-6 border bg-linear-to-tl from-gray-800 via-slate-700 to-zinc-800 rounded-xl shadow-2xl flex flex-col items-center justify-start p-3">
           <DisplayNewsSection
             sectionTitle={"trendy news"}
             newsData={trendyNews}
