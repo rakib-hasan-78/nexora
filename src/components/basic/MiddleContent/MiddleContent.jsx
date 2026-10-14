@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import { BsArrowRight } from "react-icons/bs";
 
 
-const MiddleContent = ({newsData}) => {
+const MiddleContent = ({title,newsData}) => {
     
     return (
         <div className='w-full h-auto overflow-hidden'>
@@ -13,7 +13,7 @@ const MiddleContent = ({newsData}) => {
                 py-8 shadow-2xl rounded-2xl'>
 
                 <diV className=" flex items-center justify-between w-11/12 mx-auto">
-                    <h2 className='text-2xl font-bold text-slate-300'>science & technology</h2>
+                    <h2 className='text-2xl font-bold text-slate-300'>{title}</h2>
                     <Link>
                     <span className='flex items-center gap-2 text-slate-200 font-light'>
                     see all
