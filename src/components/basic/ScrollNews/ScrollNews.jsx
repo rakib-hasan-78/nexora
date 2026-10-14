@@ -8,17 +8,17 @@ const ScrollNews = () => {
     
     
     return (
-        <div className='w-full h-auto bg-gradient-to-r from-zinc-700 via-stone-600 to-slate-700 rounded-r-xl pr-4'>
+        <div className='w-full h-auto bg-gradient-to-r from-zinc-700 via-stone-600 to-slate-700 rounded-r-xl 3xs:pr-2 lg:pr-4'>
             <Marquee
             autoFill={true}
             pauseOn={"hover"}
             >
-            <div className='flex items-center space-x-6 font-semibold text-lg py-4'>
+            <div className='flex items-center space-x-6 3xs: font-medium lg:font-semibold 3xs:text-xs lg:text-lg 3xs:py-2.5 lg:py-4'>
                 {
                 breakingNews.map(
                     news=>(
                         <p
-                        className='text-lg text-base-200' 
+                        className='3xs:text-sm lg:text-lg text-base-200' 
                         key={news.id}>
                         <Link to={`#`}>
                         {news.title}    

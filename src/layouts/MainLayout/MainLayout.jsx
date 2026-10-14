@@ -13,7 +13,7 @@ const MainLayout = () => {
           <Header />
         </header>
       </div>
-      <main className="w-11/12 mx-auto flex-1 mt-5">    
+      <main className="3xl:w-11/12 mx-auto flex-1 mt-5">    
           <Outlet/>
       </main>
       {/* footer */}

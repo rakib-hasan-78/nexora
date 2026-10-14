@@ -54,7 +54,9 @@ const HomeLayout = () => {
         <aside className="col-span-4 min-h-full  flex flex-wrap items-center justify-start gap-3 py-8">
           <AsideLogin />
           <HomeLeftBar />
-          <div><img src={classroom} alt="" /></div>
+          <div className="w-11/12">
+          <img src={classroom} alt="class-room" />
+          </div>
           <div className="w-10/12 overflow-hidden rounded-2xl shadow-2xl">
           <img src={addSection} alt="add-section" />
           </div>

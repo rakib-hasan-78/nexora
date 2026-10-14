@@ -68,7 +68,7 @@
   }
 
   .link-btn{
-    @apply px-8 py-3.5 text-neutral-200 font-bold text-lg rounded-xl;
+    @apply 3xs:px-3 lg:px-8 3xs:py-1 lg:py-3.5 text-neutral-200 3xs:font-medium lg:font-bold 3xs:text-xs lg:text-lg  3xs:rounded-md lg:rounded-xl;
   }
   /* glassmorphism */
   .glass-effect{
