@@ -6,11 +6,11 @@ import FooterLargeImage from './../../basic/FooterLargeImage/FooterLargeImage';
 
 const Footer = () => {
     return (
-        <div className='bg-linear-to-tl from-zinc-800 via-gray-700 to-slate-800 pt-6 [clip-path:polygon(0_0,100%_6%,100%_100%,0_100%)]'>
+        <div className='w-full bg-linear-to-tl from-zinc-800 via-gray-700 to-slate-800 pt-6 [clip-path:polygon(0_0,100%_6%,100%_100%,0_100%)]'>
         <section className='3xs:w-11/12 lg:w-9/12 mx-auto pt'>
         <CTA />
         </section>
-        <section className='w-9/12 mx-auto'>
+        <section className='3xs:w-full lg:w-9/12 mx-auto'>
         <FooterLinks />
         </section>
         <section className='w-9/12 mx-auto border-t rounded-full border-slate-500/70'>

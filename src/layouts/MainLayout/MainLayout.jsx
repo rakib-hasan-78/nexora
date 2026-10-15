@@ -17,7 +17,7 @@ const MainLayout = () => {
           <Outlet/>
       </main>
       {/* footer */}
-      <footer>
+      <footer className="w-full">
       <Footer />
       </footer>
     </div>
