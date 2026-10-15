@@ -49,19 +49,19 @@ const HomeLayout = () => {
           />
         </div>
       </section>
-      <div className="w-10/12 my-5 py-2 grid grid-cols-12 items-start gap-3">
+      <div className="3xs:w-full lg:w-10/12 my-5 py-2 grid grid-cols-12 items-start gap-3">
         {/* left aside */}
-        <aside className="col-span-4 min-h-full  flex flex-wrap items-center justify-start gap-3 py-8">
+        <aside className="3xs:col-span-12 lg:col-span-4 min-h-full  flex flex-wrap items-center justify-start gap-3 py-8">
           <AsideLogin />
           <HomeLeftBar />
           <div className="w-11/12">
           <img src={classroom} alt="class-room" />
           </div>
-          <div className="w-10/12 overflow-hidden rounded-2xl shadow-2xl">
+          <div className="3xs:w-full lg:w-10/12 overflow-hidden rounded-2xl shadow-2xl">
           <img src={addSection} alt="add-section" />
           </div>
         </aside>
-        <section className="col-span-8 py-8">
+        <section className="3xs:col-span-12 lg:col-span-8 py-8">
           <MainContent />
         </section>
       </div>

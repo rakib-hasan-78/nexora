@@ -38,7 +38,7 @@ const DisplayNewsSection = ({ sectionTitle, newsData }) => {
         }
         </div>
       </div>
-      <div className="grid 3xs:grid-cols-1  lg:grid-cols-2  gap-4 p-2">
+      <div className="grid 3xs:grid-cols-1  lg:grid-cols-2  gap-4  lg:p-2 3xs:h-48 lg:h-auto 3xs:overflow-scroll lg:overflow-hidden ">
       {
         totalItems.map(item=>(
             <NewsToast 
