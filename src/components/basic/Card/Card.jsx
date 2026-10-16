@@ -24,7 +24,7 @@ const Card = ({ data }) => {
             <p>{date.toLocaleDateString("en-GB")}</p>
           </div>
         </div>
-        <div className="3xs:w-2/12 lg:w-3/12 flex 3xs:flex-col lg:flex-wrap  3xs:items-start lg:items-center justify-end z-30 3xs:-space-y-4 lg:space-y-0 ">
+        <div className="3xs:w-2/12 lg:w-3/12 flex 3xs:flex-col lg:flex-row  3xs:items-start lg:items-center justify-end z-30 3xs:-space-y-4 lg:space-y-0 ">
           <button className="btn btn-circle bg-transparent border-none shadow-none text-stone-300 cursor-pointer">
             <CiBookmark />
           </button>

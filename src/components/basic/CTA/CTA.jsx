@@ -2,7 +2,7 @@ import React from 'react';
 import { IoArrowForward } from "react-icons/io5";
 const CTA = () => {
     return (
-        <div className='w-full flex 3xs:flex-col lg:flex-wrap items-center justify-between py-8'>
+        <div className='w-full flex 3xs:flex-col lg:flex-row flex-wrap items-center justify-between py-8'>
             <div className='3xs:w-full lg:w-5/12 flex items-center justify-start py-7'>
                 <h3 className='font-bold 3xs:text-3xl lg:text-5xl text-slate-300 lg:pt-6'>newsletter</h3>
             </div>

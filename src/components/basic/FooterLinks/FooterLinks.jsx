@@ -37,9 +37,9 @@ const FooterLinks = () => {
             </Link>
         </div>
       </aside>
-      <div className="3xs:w-full lg:w-7/12 flex items-start space-x-28 justify-end">
+      <div className="3xs:w-full lg:w-7/12 flex 3xs:flex-col lg:flex-row 3xs:items-center lg:items-start lg:space-x-28 justify-end">
         <nav className="flex flex-col space-y-2">
-            <h6 className="footer-title">Services</h6>
+            <h6 className="3xs:text-lg 3xs:font-medium lg:footer-title">Services</h6>
             <a className="link link-hover">Design</a>
             <a className="link link-hover">Marketing</a>
             <a className="link link-hover">Advertisement</a>

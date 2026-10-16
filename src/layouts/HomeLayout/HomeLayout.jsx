@@ -51,7 +51,7 @@ const HomeLayout = () => {
       </section>
       <div className="3xs:w-full lg:w-10/12 my-5 py-2 grid grid-cols-12 items-start gap-3">
         {/* left aside */}
-        <aside className="3xs:col-span-12 lg:col-span-4 min-h-full  flex flex-wrap items-center justify-start gap-3 py-8">
+        <aside className="3xs:col-span-12 lg:col-span-4 sticky top-0 h-fit flex flex-wrap items-center justify-start gap-3 py-8 ">
           <AsideLogin />
           <HomeLeftBar />
           <div className="w-11/12">
