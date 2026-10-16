@@ -22,7 +22,10 @@ const AllNewsLayout = () => {
         </section>
         <div className="w-full mt-16 py-4 grid grid-cols-12 gap-5 items-center-safe">
           <aside className="col-span-3 py-2 top-0 h-fit sticky">
-              <Categories />
+              <Categories 
+              selectedCategory={selectedCategory} 
+              setSelectedCategory={setSelectedCategory}
+              />
           </aside>
           <section className="col-span-6 py-3 border">
             <h3>
