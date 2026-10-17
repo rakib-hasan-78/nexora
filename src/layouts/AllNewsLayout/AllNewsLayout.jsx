@@ -5,6 +5,7 @@ import Categories from './../../components/shared/Categories/Categories';
 import HomeLeftBar from './../../components/shared/HomeLeftBar/HomeLeftBar';
 import AsideLogin from './../../components/shared/AsideLogin/AsideLogin';
 import SocialBtn from './../../components/shared/SocialBtn/SocialBtn';
+import Promotion from './../../components/shared/Promotion/Promotion';
 
 const AllNewsLayout = () => {
   const [selectedCategory, setSelectedCategory] = useState(0);
@@ -38,9 +39,10 @@ const AllNewsLayout = () => {
             </h3>
           </section>
           <aside className="col-span-3 py-2">
-            <div className="w-full h-auto border flex flex-wrap items-start justify-end space-y-3">
+            <div className="w-full h-auto flex flex-wrap items-start justify-end space-y-3">
               <AsideLogin />
               <SocialBtn />
+              <Promotion />
             </div>
           </aside>
         </div>
