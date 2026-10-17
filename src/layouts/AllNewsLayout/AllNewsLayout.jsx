@@ -3,6 +3,8 @@ import Hero from "./../../components/basic/Hero/Hero";
 import backgroundImage from "../../assets/all news.webp";
 import Categories from './../../components/shared/Categories/Categories';
 import HomeLeftBar from './../../components/shared/HomeLeftBar/HomeLeftBar';
+import AsideLogin from './../../components/shared/AsideLogin/AsideLogin';
+import SocialBtn from './../../components/shared/SocialBtn/SocialBtn';
 
 const AllNewsLayout = () => {
   const [selectedCategory, setSelectedCategory] = useState(0);
@@ -36,8 +38,9 @@ const AllNewsLayout = () => {
             </h3>
           </section>
           <aside className="col-span-3 py-2">
-            <div className="w-full h-auto border flex items-start justify-end space-y-3">
-              hello
+            <div className="w-full h-auto border flex flex-wrap items-start justify-end space-y-3">
+              <AsideLogin />
+              <SocialBtn />
             </div>
           </aside>
         </div>
