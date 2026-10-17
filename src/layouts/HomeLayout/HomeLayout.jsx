@@ -53,7 +53,7 @@ const HomeLayout = () => {
         {/* left aside */}
         <aside className="3xs:col-span-12 lg:col-span-4 sticky top-0 h-fit flex flex-wrap items-center justify-start gap-3 py-8 ">
           <AsideLogin />
-          <HomeLeftBar />
+          <HomeLeftBar classname={`3xs:w-full lg:w-11/12`} />
           <div className="w-11/12">
           <img src={classroom} alt="class-room" />
           </div>

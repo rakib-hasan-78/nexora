@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import MostViewed from "./../MostViewed/MostViewed";
 import addSection from "../../../assets/bg.png";
 
-const HomeLeftBar = () => {
+const HomeLeftBar = ({classname}) => {
   const [tab, setTab] = useState("mostRead");
 
   return (
-    <div className="3xs:w-full lg:w-11/12 min-h-full bg-gradient-to-r from-stone-700 via-slate-600 to-zinc-700 gap-3 rounded-xl  flex flex-col justify-between py-8">
+    <div className={` min-h-full bg-gradient-to-r from-stone-700 via-slate-600 to-zinc-700 gap-3 rounded-xl  flex flex-col justify-between py-8 ${classname} `}>
       <div className="w-full flex items-center justify-center px-1.5">
         <button
           onClick={() => setTab("mostRead")}

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Hero from "./../../components/basic/Hero/Hero";
 import backgroundImage from "../../assets/all news.webp";
 import Categories from './../../components/shared/Categories/Categories';
+import HomeLeftBar from './../../components/shared/HomeLeftBar/HomeLeftBar';
 
 const AllNewsLayout = () => {
   const [selectedCategory, setSelectedCategory] = useState(0);
@@ -20,12 +21,13 @@ const AllNewsLayout = () => {
             button={false}
           />
         </section>
-        <div className="w-full mt-16 py-4 grid grid-cols-12 gap-5 items-center-safe">
-          <aside className="col-span-3 py-2 top-0 h-fit sticky">
+        <div className="w-full mt-16 py-4 grid grid-cols-12 gap-5 items-start-safe">
+          <aside className="col-span-3 py-2 top-0 h-fit sticky flex flex-col items-center space-y-2">
               <Categories 
               selectedCategory={selectedCategory} 
               setSelectedCategory={setSelectedCategory}
               />
+              <HomeLeftBar classname={`w-full`} />
           </aside>
           <section className="col-span-6 py-3 border">
             <h3>
@@ -33,8 +35,10 @@ const AllNewsLayout = () => {
               magnam quod incidunt quibusdam amet.
             </h3>
           </section>
-          <aside className="col-span-3 py-2 bg-amber-200">
-            <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+          <aside className="col-span-3 py-2">
+            <div className="w-full h-auto border flex items-start justify-end space-y-3">
+              hello
+            </div>
           </aside>
         </div>
       </main>

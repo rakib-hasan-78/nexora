@@ -24,7 +24,7 @@ const Categories = (
                 key={category.id}
                 onClick={()=>setSelectedCategory(category.id)}
                 >
-                    {category.name} ({category.length})
+                    {category.name} 
                 </button>
 
                 </div>
