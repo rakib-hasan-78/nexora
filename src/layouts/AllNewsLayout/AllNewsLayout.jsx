@@ -1,14 +1,22 @@
-import React, { useState } from "react";
+import React, { lazy, Suspense, use, useState } from "react";
 import Hero from "./../../components/basic/Hero/Hero";
 import backgroundImage from "../../assets/all news.webp";
 import Categories from './../../components/shared/Categories/Categories';
 import HomeLeftBar from './../../components/shared/HomeLeftBar/HomeLeftBar';
 import AsideLogin from './../../components/shared/AsideLogin/AsideLogin';
 import SocialBtn from './../../components/shared/SocialBtn/SocialBtn';
-import Promotion from './../../components/shared/Promotion/Promotion';
+import SidebarSkeleton from "../../components/Skeletons/SidebarSkeleton/SidebarSkeleton";
+import Search from './../../components/basic/Search/Search';
+import { data } from "../../../public/allData/allData";
+
+const Promotion = lazy(()=> import('../../components/shared/Promotion/Promotion'))
 
 const AllNewsLayout = () => {
   const [selectedCategory, setSelectedCategory] = useState(0);
+  const [searchNews, setSearchNews] = useState('');
+  const useData = use(data);
+
+  console.log(useData);
   return (
     <section className="w-full min-h-screen flex flex-col items-center">
       <main className=" w-10/12 flex-1">
@@ -32,17 +40,20 @@ const AllNewsLayout = () => {
               />
               <HomeLeftBar classname={`w-full`} />
           </aside>
-          <section className="col-span-6 py-3 border">
-            <h3>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere
-              magnam quod incidunt quibusdam amet.
-            </h3>
+          <section className="col-span-6 py-3 flex flex-col items-center">
+              <Search
+              searchNews={searchNews}
+              setSearchNews={setSearchNews}
+               useData={useData} />
+
           </section>
           <aside className="col-span-3 py-2">
             <div className="w-full h-auto flex flex-wrap items-start justify-end space-y-3">
               <AsideLogin />
               <SocialBtn />
+              <Suspense fallback={ <SidebarSkeleton/> }>
               <Promotion />
+              </Suspense>
             </div>
           </aside>
         </div>

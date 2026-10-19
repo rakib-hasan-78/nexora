@@ -41,7 +41,7 @@ const Card = ({ data }) => {
         </div>
         {/* image */}
         <div className="my-2 rounded-xl overflow-hidden z-30">
-            <img src={thumbnail_url || demoImage } onError={(event)=>event.currentTarget.src = demoImage} alt={title} />
+            <img src={thumbnail_url || demoImage } onError={(event)=>event.currentTarget.src = demoImage} alt={title} referrerPolicy="no-referrer"  />
         </div>
         {/* description */}
         <div className="z-30">

@@ -14,7 +14,7 @@ const MostViewed = ({tab}) => {
       className="w-full py-3 max-h-150 overflow-y-auto
   scrollbar-thin scrollbar-thumb-slate-400 scrollbar-track-slate-800 scrollbar-thumb-rounded-full scrollbar-track-rounded-full flex flex-col gap-3"
     >
-    <Suspense fallback={SidebarSkeleton}>
+    <Suspense fallback={<SidebarSkeleton/>}>
 
       {tab==='mostRead'&& mostViewedData.map((item) => (
         <Card key={item.id} data={item} />

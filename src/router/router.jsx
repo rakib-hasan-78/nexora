@@ -14,7 +14,7 @@ const router = createBrowserRouter([
                 index:true,
                 Component:Home
             },
-            {   path:'/all-news',
+            {   path:'all-news',
                 Component: AllNews,
             }
         ]

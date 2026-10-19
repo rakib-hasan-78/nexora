@@ -17,11 +17,10 @@ const Categories = (
       <div className="w-auto px-3 py-2 flex flex-col space-y-2">
         {
             categoryData?.map(category=>(
-                <div className={`${selectedCategory===category.id ?'aura':''} text-violet-800/30 overflow-hidden`}>
+                <div key={category.id} className={`${selectedCategory===category.id ?'aura':''} text-violet-800/30 overflow-hidden`}>
                 <button
                 className={`w-full py-3 cursor-pointer ${selectedCategory===category.id ?
                 'btn-glass border-violet-300 font-bold':' glass-effect'} hover:border-violet-300 delay-75 transition-all`}
-                key={category.id}
                 onClick={()=>setSelectedCategory(category.id)}
                 >
                     {category.name} 
