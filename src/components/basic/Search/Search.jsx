@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { RxCross1 } from "react-icons/rx";
 import { IoSearchOutline } from "react-icons/io5";
 
 
 const Search = ({newsData,searchNews, setSearchNews}) => {
+    const [getValue, setGetValue] = useState('');
     
     return (
         <>
@@ -16,15 +17,20 @@ const Search = ({newsData,searchNews, setSearchNews}) => {
             >
                 <IoSearchOutline className='text-2xl' />
                 <input
+                value={getValue}
                 className='relative border w-10/12 py-2 border-none outline-0' 
                 type="text" name="text" id="#"
                  />
+                 {
+                    getValue &&
                 <RxCross1 className='text-2xl cursor-pointer hover-3d hover:p-0.5 transition-all delay-75 hover:bg-gray hover:font-bold ease-in-out rotate-180 text-slate-200'/>
+
+                 }
             </div>
         </div>
             
         </div>
-        <div className="aura w-full mt-6 text-purple-700/90">
+        <div className="aura w-full mt-6 text-gray-700/90">
   <div className="card bg-linear-to-tl from-gray-800 via-slate-700 to-zinc-800 rounded-xl shadow-2xl border border-white/80">
     <div className="card-body">
       <p className='text-red-400 font-bold'>This card has dual aura</p>
