@@ -15,6 +15,11 @@ const AllNewsLayout = () => {
   const [selectedCategory, setSelectedCategory] = useState(0);
   const [searchNews, setSearchNews] = useState('');
   const useData = use(data);
+  const searchedData = useData.filter(item=>
+    item?.tags?.some(tag=>
+      tag?.toLowerCase()?.includes(searchNews.toLowerCase())
+    )
+  );
 
   console.log(useData);
   return (
@@ -44,7 +49,7 @@ const AllNewsLayout = () => {
               <Search
               searchNews={searchNews}
               setSearchNews={setSearchNews}
-               useData={useData} />
+               newsData={searchedData} />
 
           </section>
           <aside className="col-span-3 py-2">
