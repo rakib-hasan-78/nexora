@@ -15,13 +15,9 @@ const AllNewsLayout = () => {
   const [selectedCategory, setSelectedCategory] = useState(0);
   const [searchNews, setSearchNews] = useState('');
   const useData = use(data);
-  const searchedData = useData.filter(item=>
-    item?.tags?.some(tag=>
-      tag?.toLowerCase()?.includes(searchNews.toLowerCase())
-    )
-  );
+  
 
-  console.log(useData);
+
   return (
     <section className="w-full min-h-screen flex flex-col items-center">
       <main className=" w-10/12 flex-1">
@@ -49,7 +45,13 @@ const AllNewsLayout = () => {
               <Search
               searchNews={searchNews}
               setSearchNews={setSearchNews}
-               newsData={searchedData} />
+              newsData={searchedData}
+                />
+              <div className="w-full border mt-18">
+                <div className="w-auto">
+
+                </div>
+              </div>
 
           </section>
           <aside className="col-span-3 py-2">
@@ -68,3 +70,13 @@ const AllNewsLayout = () => {
 };
 
 export default AllNewsLayout;
+
+
+
+
+// //  data search through searchbar
+//   const searchedData = useData.filter(item=>
+//     item?.tags?.some(tag=>
+//       tag?.toLowerCase()?.includes(searchNews.toLowerCase())
+//     )
+//   );
