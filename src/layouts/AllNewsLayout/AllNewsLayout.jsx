@@ -10,12 +10,32 @@ import Search from './../../components/basic/Search/Search';
 import { data } from "../../../public/allData/allData";
 
 const Promotion = lazy(()=> import('../../components/shared/Promotion/Promotion'))
+import Card from './../../components/basic/Card/Card';
 
 const AllNewsLayout = () => {
   const [selectedCategory, setSelectedCategory] = useState(0);
   const [searchNews, setSearchNews] = useState('');
   const useData = use(data);
-  
+
+  // filterdata handler
+  const filterData = useData.filter(news=>{
+    if (selectedCategory===0) return true
+    else if (selectedCategory===1) return news.others.is_today_pick
+    return news.category_id === selectedCategory
+  });
+
+  const searchData= filterData.filter(news=>{
+    const query = searchNews.trim().toLowerCase();
+    if(!query) return true
+    return(
+      news?.title.toLowerCase().includes(query) ||
+      news?.tags?.some(item=>item.toLowerCase().includes(query))
+    ) 
+  })
+
+ 
+
+
 
 
   return (
@@ -45,12 +65,17 @@ const AllNewsLayout = () => {
               <Search
               searchNews={searchNews}
               setSearchNews={setSearchNews}
-              newsData={searchedData}
+              newsData={''}
                 />
-              <div className="w-full border mt-18">
-                <div className="w-auto">
-
+              <div className="w-full mt-18 flex flex-col">
+              {
+                searchData.map(news=>(
+                <div key={news.id} className="w-auto bg-linear-to-tl from-gray-800 via-slate-700 to-zinc-800 rounded-xl shadow-2xl border border-white/15">
+                  <Card key={news.id}data={news} />
                 </div>
+                  
+                ))
+              }
               </div>
 
           </section>
