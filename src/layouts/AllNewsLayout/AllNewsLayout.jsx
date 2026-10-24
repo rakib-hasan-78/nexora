@@ -67,10 +67,10 @@ const AllNewsLayout = () => {
               setSearchNews={setSearchNews}
               newsData={''}
                 />
-              <div className="w-full mt-18 flex flex-col">
+              <div className="w-full mt-18 flex flex-col space-y-3.5 bg-emerald-600 bg-linear-to-tl from-gray-800 via-slate-700 to-zinc-800 rounded-2xl shadow-2xl border border-white/10 p-6 ">
               {
                 searchData.map(news=>(
-                <div key={news.id} className="w-auto bg-linear-to-tl from-gray-800 via-slate-700 to-zinc-800 rounded-xl shadow-2xl border border-white/15">
+                <div key={news.id} className="">
                   <Card key={news.id}data={news} />
                 </div>
                   

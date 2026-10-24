@@ -8,7 +8,7 @@ const Card = ({ data }) => {
   const { title, thumbnail_url, author, details, rating, total_view } = data;
   const date = new Date(author.published_date);
   return (
-    <div className="w-full h-125  flex flex-col items-center justify-center px-2 ">
+    <div className="w-full h-125  flex flex-col items-center justify-center ">
       {/* card header */}
       <div className="w-full flex items-center justify-between glass-effect rounded-b-none">
         <div className="3xs:w-10/12 lg:w-7/12 flex items-center justify-start space-x-2 z-30">
