@@ -19,6 +19,7 @@ const Search = ({ newsData, searchNews, setSearchNews }) => {
               className="relative border w-10/12 py-2 border-none outline-0"
               type="text"
               name="text"
+              placeholder="search by tags, author or title..."
               onChange={(e) => setSearchNews(e.target.value)}
             />
             {searchNews && (
