@@ -29,7 +29,7 @@ const Search = ({ newsData, searchNews, setSearchNews }) => {
             }
             {searchNews && (
               <RxCross1
-                onClick={() => setSearchNews("")}
+                onClick={() => setSearchNews("")}// 
                 className="text-2xl cursor-pointer hover-3d hover:p-0.5 transition-all delay-75 hover:bg-gray hover:font-bold ease-in-out rotate-180 text-slate-200"
               />
             )}
@@ -42,7 +42,7 @@ const Search = ({ newsData, searchNews, setSearchNews }) => {
         <div className="card bg-linear-to-tl from-gray-800 via-slate-700 to-zinc-800 rounded-xl shadow-2xl border border-white/80">
           <div className="card-body flex items-center justify-center">
             {newsData.length===0?
-            <p className="text-red-400 font-bold border">sorry no news found!</p> :
+            <p className="text-red-400 font-bold">sorry no news found!</p> :
             <p className="text-emerald-400 font-bold"> total {newsData.length} news found!  </p>
             }
             
