@@ -39,7 +39,7 @@
       setIsLoading(true)
       try {
         await new Promise(resolve=>setTimeout(resolve, 300))
-        if (displayData<data.length){
+        if (displayData.length<data.length){
           setDisplayData(prev=> prev + 8)
         } else {
           setDisplayData(8)
@@ -55,4 +55,3 @@
 
 
 
-  
