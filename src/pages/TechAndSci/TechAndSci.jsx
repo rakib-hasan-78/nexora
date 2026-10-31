@@ -1,9 +1,10 @@
 import React from 'react';
+import TechAndSciLayout from './../../layouts/TechAndSciLayout/TechAndSciLayout';
 
 const TechAndSci = () => {
     return (
         <div>
-            tech......
+            <TechAndSciLayout />
         </div>
     );
 };
