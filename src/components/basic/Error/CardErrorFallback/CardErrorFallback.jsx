@@ -1,7 +1,6 @@
 
 import React from "react";
-import { FiAlertTriangle, FiFileQuestion } from "react-icons/fi";
-
+import { FiAlertTriangle, FiFileText } from "react-icons/fi";
 const CardErrorFallback = () => {
 
     return (
@@ -43,7 +42,7 @@ const CardErrorFallback = () => {
             {/* Bottom indicator */}
             <div className="relative z-10 flex items-center gap-2 mt-4 text-xs text-gray-500">
 
-                <FiFileQuestion />
+                <FiFileText />
 
                 <span>Content couldn't be displayed</span>
 

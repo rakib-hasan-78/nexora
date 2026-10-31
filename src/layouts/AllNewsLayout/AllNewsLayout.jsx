@@ -10,7 +10,7 @@ import SocialBtn from "./../../components/shared/SocialBtn/SocialBtn";
 import SidebarSkeleton from "../../components/Skeletons/SidebarSkeleton/SidebarSkeleton";
 import Search from "./../../components/basic/Search/Search";
 import { data } from "../../../public/allData/allData";
-import Card from "./../../components/basic/Card/Card";
+
 import useNewsListing from "../../CustomHooks/useNewsListing/useNewsListing";
 
 import {
@@ -22,8 +22,11 @@ import {
 
 const Promotion = lazy(
     () => import("../../components/shared/Promotion/Promotion"),
-);import ErrorBoundary from './../../components/basic/Error/ErrorBoundary/ErrorBoundary';
+);
+const Card =lazy(()=> import("../../components/basic/Card/Card"));
+import ErrorBoundary from './../../components/basic/Error/ErrorBoundary/ErrorBoundary';
 import CardErrorFallback from "../../components/basic/Error/CardErrorFallback/CardErrorFallback";
+import NewsCardSkeleton from "../../components/Skeletons/NewsCardSkeleton/NewsCardSkeleton";
 
 
 const AllNewsLayout = () => {
@@ -124,9 +127,11 @@ const AllNewsLayout = () => {
                         
                             {displayData.map((news) => (
                                 <ErrorBoundary 
+                                key={news.id}
                                 fallback={ <CardErrorFallback/>}>
-                                <Suspense>
-                                <div key={news.id} className="w-full min-w-0">
+                                <Suspense 
+                                fallback={<NewsCardSkeleton/> }>
+                                <div className="w-full min-w-0">
 
                                     <Card data={news} />
 
