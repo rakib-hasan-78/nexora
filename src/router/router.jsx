@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router';
 import Root from '../pages/Root/Root';
 import Home from '../pages/Home/Home';
 import AllNews from '../pages/AllNews/AllNews';
+import TechAndSci from '../pages/TechAndSci/TechAndSci';
 
 const router = createBrowserRouter([
     {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
             },
             {   path:'all-news',
                 Component: AllNews,
+            },
+            {
+                path:'tech&sci',
+                Component: TechAndSci,
             }
         ]
     }

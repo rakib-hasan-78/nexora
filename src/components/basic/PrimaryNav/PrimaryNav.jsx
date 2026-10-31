@@ -6,7 +6,7 @@ const PrimaryNav = () => {
         <div className='w-full flex justify-end space-x-3.5'>
             <NavLink to={'/'}>home</NavLink>
             <NavLink to={'/all-news'}>all news</NavLink>
-            <NavLink>tech & sci</NavLink>
+            <NavLink to={'/tech&sci'}>tech & sci</NavLink>
             <NavLink>well-being</NavLink>
             <NavLink>sports</NavLink>
             <NavLink>dashboard</NavLink>

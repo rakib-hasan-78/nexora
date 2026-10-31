@@ -18,6 +18,7 @@ import addSection from "../../../src/assets/bg.png";
 import MainContent from './../../components/shared/MainContent/MainContent';
 import classroom from '../.././assets/class.png';
 import AsideLogin from './../../components/shared/AsideLogin/AsideLogin';
+import MainContentSkeleton from "../../components/Skeletons/MainContentSkeleton/MainContentSkeleton";
 
 const HomeLayout = () => {
   const newsData = use(data);
@@ -70,7 +71,7 @@ const HomeLayout = () => {
           </div>
         </aside>
         <section className="3xs:col-span-12 lg:col-span-8 py-8">
-        <Suspense fallback={ <SliderSkeleton/> }>
+        <Suspense fallback={ <MainContentSkeleton/> }>
           <MainContent />
         </Suspense>
         </section>
