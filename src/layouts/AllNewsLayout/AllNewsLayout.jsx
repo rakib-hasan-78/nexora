@@ -95,13 +95,17 @@ const AllNewsLayout = () => {
 
                     {/* Left sidebar */}
                     <aside className="col-span-1 lg:col-span-3 py-2 lg:sticky lg:top-5 lg:h-fit min-w-0 flex flex-col items-center gap-2">
-
+                        <Suspense 
+                        fallback={ <SidebarSkeleton/> }>
                         <Categories
                             selectedCategory={selectedCategory}
                             setSelectedCategory={setSelectedCategory}
                         />
 
                         <HomeLeftBar classname="w-full" />
+                        
+                        </Suspense>
+
 
                     </aside>
 

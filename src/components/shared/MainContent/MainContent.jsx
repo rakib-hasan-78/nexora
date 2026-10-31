@@ -26,6 +26,7 @@ const MainContent = () => {
     
     return (
         <div className='w-full flex flex-col space-y-3'>
+        
             <MiddleContent 
             title={`science & technology`} 
             newsData={sciTechData} />
