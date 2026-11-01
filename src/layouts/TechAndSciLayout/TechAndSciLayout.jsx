@@ -5,10 +5,29 @@ import Search from './../../components/basic/Search/Search';
 
 import { data } from '../../../public/allData/allData';
 import customDataFilter from '../../components/customDataFilter/customDataFilter';
+import useNewsListing from '../../CustomHooks/useNewsListing/useNewsListing';
+import { displayDataHandler, searchHandler } from '../../utilities/reusableFunctions';
 
 const TechAndSciLayout = () => {
 
+    // ** custom hook for data handling 
+
+    const {
+        searchNews,
+        setSearchNews,
+        isLoading,
+        setIsLoading,
+        dataShow,
+        setDataShow
+
+        } = useNewsListing()
+
+    // ** filter data for sci & tech
     const techAndSciData = customDataFilter(data, 'science','technology')
+    // ** data interactivity for search handler 
+    const searchData = searchHandler(techAndSciData, searchNews);
+    // ** display data in UI 
+    const displayData = displayDataHandler(searchData, dataShow);
     
 
     return (
@@ -34,7 +53,7 @@ const TechAndSciLayout = () => {
                         <Search />
                         </div>
                         <div className='news-card-bg'>
-
+                        
                         </div>
                     </section>
                 </div>
