@@ -12,15 +12,13 @@ const HomeLeftBar = ({classname}) => {
           onClick={() => setTab("mostRead")}
           className={`border border-secondary text-red-300 rounded-l-xl p-2 border-r-0 cursor-pointer text-sm ${tab === "mostRead" && "bg-secondary border-red-300 text-slate-100 font-bold"}`}
         >
-          <span className="lg:hidden">most viewed</span>
-          <span className="hidden lg:inline">most viewed news</span>
+          <span>most viewed</span>
         </button>
         <button
           onClick={() => setTab("topRated")}
           className={`border border-secondary text-red-300 border-l-0 p-2 rounded-r-xl cursor-pointer text-sm ${tab === "topRated" && "bg-secondary border-red-300 text-slate-100 font-bold"}`}
         >
-          <span className="lg:hidden">top rated</span>
-          <span className="hidden lg:inline">top rated news</span>
+          <span>top rated</span>
         </button>
       </div>
       {<MostViewed tab={tab} />}

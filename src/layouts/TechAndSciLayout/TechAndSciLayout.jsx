@@ -12,6 +12,9 @@ import { Suspense } from 'react';
 import NewsCardSkeleton from '../../components/Skeletons/NewsCardSkeleton/NewsCardSkeleton';
 import { lazy } from 'react';
 const Card = lazy(()=>import('./../../components/basic/Card/Card'));
+const Promotion = lazy(()=>import('../../components/shared/Promotion/Promotion'))
+import HomeLeftBar from './../../components/shared/HomeLeftBar/HomeLeftBar';
+import AsideLogin from './../../components/shared/AsideLogin/AsideLogin';
 
 const TechAndSciLayout = () => {
 
@@ -113,6 +116,11 @@ const TechAndSciLayout = () => {
                     </section>
                     {/* left-side bar */}
                     <aside className='col-span-1 lg:col-span-3 py-2 lg:sticky lg:top-5 lg:h-fit min-w-0'>
+                    <Suspense fallback={<NewsCardSkeleton/>}>
+                        <HomeLeftBar classname='w-full' />
+                        <AsideLogin className={'lg:w-full my-1'} />
+                        <Promotion />
+                    </Suspense>
 
                     </aside>
                 </div>
