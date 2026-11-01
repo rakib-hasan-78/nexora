@@ -3,7 +3,14 @@ import Hero from './../../components/basic/Hero/Hero';
 import backgroundImage from "../../assets/techSciHero.webp";
 import Search from './../../components/basic/Search/Search';
 
+import { data } from '../../../public/allData/allData';
+import customDataFilter from '../../components/customDataFilter/customDataFilter';
+
 const TechAndSciLayout = () => {
+
+    const techAndSciData = customDataFilter(data, 'science','technology')
+    
+
     return (
         <section className='w-full min-h-screen flex flex-col items-center'>
             <main className='w-full lg:w-10/12 flex-1 px-3 sm:px-5 lg:px-0'>
@@ -25,6 +32,9 @@ const TechAndSciLayout = () => {
                     {/* search component */}
                         <div className='w-full min-w-0'>
                         <Search />
+                        </div>
+                        <div className='news-card-bg'>
+
                         </div>
                     </section>
                 </div>
