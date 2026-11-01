@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from './../../components/basic/Hero/Hero';
 import backgroundImage from "../../assets/techSciHero.webp";
+import Search from './../../components/basic/Search/Search';
 
 const TechAndSciLayout = () => {
     return (
@@ -18,6 +19,15 @@ const TechAndSciLayout = () => {
                         button={false}
                      />
                 </section>
+                <div className='basic'>
+                    {/* main content */}
+                    <section className='col-span-1 lg:col-span-9 min-w-0 py-3 flex flex-col items-center'>
+                    {/* search component */}
+                        <div className='w-full min-w-0'>
+                        <Search />
+                        </div>
+                    </section>
+                </div>
             </main>
         </section>
     );

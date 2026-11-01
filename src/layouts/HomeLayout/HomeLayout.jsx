@@ -12,7 +12,6 @@ import "swiper/css";
 import { data } from "../../../public/allData/allData";
 import { Suspense } from "react";
 import SliderSkeleton from "../../components/Skeletons/SliderSkeleton/SliderSkeleton";
-// import DisplayNewsSection from "./../../components/shared/DisplayNewsSection/DisplayNewsSection";
 import HomeLeftBar from "./../../components/shared/HomeLeftBar/HomeLeftBar";
 import addSection from "../../../src/assets/bg.png";
 import MainContent from './../../components/shared/MainContent/MainContent';

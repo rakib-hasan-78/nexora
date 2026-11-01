@@ -90,7 +90,7 @@ const AllNewsLayout = () => {
 
 
                 {/* Main content grid */}
-                <div className="w-full mt-8 md:mt-12 lg:mt-16 py-4 grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
+                <div className="basic">
 
 
                     {/* Left sidebar */}
