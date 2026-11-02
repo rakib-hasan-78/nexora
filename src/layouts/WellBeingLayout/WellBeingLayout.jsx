@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import Hero from "./../../components/basic/Hero/Hero";
 import HeroImage from "../../assets/well-being-hero.webp";
 import Search from "./../../components/basic/Search/Search";
@@ -6,6 +6,10 @@ import useNewsListing from "../../CustomHooks/useNewsListing/useNewsListing";
 import customDataFilter from "../../components/customDataFilter/customDataFilter";
 import { data } from "../../../public/allData/allData";
 import { dataLoadHandler,displayDataHandler, searchHandler } from "../../utilities/reusableFunctions";
+import ErrorBoundary from "../../components/basic/Error/ErrorBoundary/ErrorBoundary";
+import CardErrorFallback from "../../components/basic/Error/CardErrorFallback/CardErrorFallback";
+import NewsCardSkeleton from "../../components/Skeletons/NewsCardSkeleton/NewsCardSkeleton";
+const Card = lazy(()=>import("./../../components/basic/Card/Card"));
 
 const WellBeingLayout = () => {
     const {
@@ -26,7 +30,7 @@ const WellBeingLayout = () => {
     const loadMoreHandler =()=>{
         dataLoadHandler(setIsLoading, wellbeingDisplayHandler,wellbeingSearchHandler,setDataShow);
     };
-    
+
   return (
     <section className="w-full min-h-screen flex flex-col items-center">
       <main className="w-full lg:w-10/12 flex-1 px-3 sm:px-5 lg:px-0">
@@ -48,6 +52,25 @@ const WellBeingLayout = () => {
                   Nexora News: wellbeing
                 </h2>
               </div>
+
+              {
+                wellbeingDisplayHandler.map(news=>(
+                    <ErrorBoundary
+                    key={news.id}
+                    fallback={<CardErrorFallback/>}
+                    >
+                    <Suspense
+                    fallback={<NewsCardSkeleton/>}
+                    >
+                    <div className="w-full lg:w-[calc(50%-7px)]">
+                        <Card data={news} />
+                    </div>
+
+                    </Suspense>
+
+                    </ErrorBoundary>
+                ))
+              }
 
             </div>
           </section>
