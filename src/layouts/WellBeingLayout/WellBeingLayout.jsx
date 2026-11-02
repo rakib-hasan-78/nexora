@@ -51,7 +51,12 @@ const WellBeingLayout = () => {
       <main className="w-full lg:w-10/12 flex-1 px-3 sm:px-5 lg:px-0">
         {/* hero section */}
         <section className="w-full">
-          <Hero height="min-h-screen lg:min-h-126" bgImage={HeroImage} />
+          <Hero height="min-h-screen lg:min-h-126"
+           bgImage={HeroImage}
+           title="Nurturing Body & Mind"
+           paragraph="Stay informed on everything you need to thrive in a demanding world."
+           button={false}
+            />
         </section>
         <div className="basic">
           {/* main body content  */}
