@@ -5,6 +5,7 @@ import Home from '../pages/Home/Home';
 import AllNews from '../pages/AllNews/AllNews';
 import TechAndSci from '../pages/TechAndSci/TechAndSci';
 import WellBeing from '../pages/WellBeing/WellBeing';
+import Sports from '../pages/Sports/Sports';
 
 const router = createBrowserRouter([
     {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
             {
                 path:'well-being',
                 Component: WellBeing,
+            },
+            {
+                path:'/sports',
+                Component:Sports,
             }
         ]
     }

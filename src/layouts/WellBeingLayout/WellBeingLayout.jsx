@@ -80,7 +80,7 @@ const WellBeingLayout = () => {
                     </span>
                   </h2>
                 </div>
-
+                {/* news card content */}
                 {wellbeingDisplayHandler.map((news) => (
                   <ErrorBoundary key={news.id} fallback={<CardErrorFallback />}>
                     <Suspense fallback={<NewsCardSkeleton />}>

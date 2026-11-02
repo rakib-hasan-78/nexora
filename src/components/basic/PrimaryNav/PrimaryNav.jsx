@@ -8,7 +8,7 @@ const PrimaryNav = () => {
             <NavLink to={'/all-news'}>all news</NavLink>
             <NavLink to={'/tech&sci'}>tech & sci</NavLink>
             <NavLink to={'/well-being'}>well-being</NavLink>
-            <NavLink>sports</NavLink>
+            <NavLink to={'sports'}>sports</NavLink>
             <NavLink>dashboard</NavLink>
             <NavLink>contact</NavLink>
         </div>
