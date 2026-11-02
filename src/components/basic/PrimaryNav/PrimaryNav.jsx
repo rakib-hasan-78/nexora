@@ -7,7 +7,7 @@ const PrimaryNav = () => {
             <NavLink to={'/'}>home</NavLink>
             <NavLink to={'/all-news'}>all news</NavLink>
             <NavLink to={'/tech&sci'}>tech & sci</NavLink>
-            <NavLink>well-being</NavLink>
+            <NavLink to={'/well-being'}>well-being</NavLink>
             <NavLink>sports</NavLink>
             <NavLink>dashboard</NavLink>
             <NavLink>contact</NavLink>
