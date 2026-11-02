@@ -128,6 +128,10 @@ const AllNewsLayout = () => {
 
                         {/* News cards */}
                         <div className="w-full min-w-0 mt-8 md:mt-12 lg:mt-18 flex flex-col gap-3.5 bg-linear-to-tl from-gray-800 via-slate-700 to-zinc-800 rounded-xl md:rounded-2xl shadow-2xl border border-white/10 p-3 sm:p-4 md:p-6">
+
+                         <div className='w-full py-6'>
+                            <h2 className='text-slate-300/80 font-bold text-center text-3xl'>Nexora News: <span className='text-pink-600'>({search.length})</span></h2>
+                        </div>
                         
                             {displayData.map((news) => (
                                 <ErrorBoundary 

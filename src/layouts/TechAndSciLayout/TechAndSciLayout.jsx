@@ -72,7 +72,7 @@ const TechAndSciLayout = () => {
                         </div>
                         <div className='news-card-bg'>
                         <div className='w-full py-6'>
-                            <h2 className='text-slate-300/80 font-bold text-center text-3xl'>Nexora News: tech & sci</h2>
+                            <h2 className='text-slate-300/80 font-bold text-center text-3xl'>Nexora News: tech & sci <span className='text-pink-600'>({searchData.length})</span></h2>
                         </div>
                         {
                             displayData.map(news=>(
