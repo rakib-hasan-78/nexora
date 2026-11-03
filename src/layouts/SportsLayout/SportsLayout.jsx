@@ -27,7 +27,13 @@ const SportsLayout = () => {
       <main className="w-full lg:w-10/12 flex-1 px-3 sm:px-5 lg:px-0">
         {/* hero section */}
         <section className="w-full">
-          <Hero height="min-h-screen lg:min-h-126" bgImage={sportsHeroBG} />
+          <Hero 
+          height="min-h-screen lg:min-h-126" 
+          bgImage={sportsHeroBG} 
+          title="Sports"
+          paragraph="Discover the grit, the strategy, and the unforgettable journeys of the local sports icons who turned ordinary roads into arenas of historic triumph."
+          button={false}
+          />
         </section>
         <div className="basic">
           {/* main content body */}

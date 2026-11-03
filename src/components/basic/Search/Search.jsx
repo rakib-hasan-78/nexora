@@ -13,7 +13,10 @@ const Search = ({ newsData, searchNews, setSearchNews }) => {
             <h3>search news here</h3>
           </div>
           <div className="w-10/12 border flex items-center justify-center z-10 py-2 space-x-1.5 rounded-2xl mt-5 shadow-2xl glass mb-4 border-white/20 relative">
+          {
+            searchNews &&
             <IoSearchOutline className="text-2xl" />
+          }
             <input
               value={searchNews}
               className="relative border w-10/12 py-2 border-none outline-0"

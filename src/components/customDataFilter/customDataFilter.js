@@ -10,7 +10,5 @@ const customDataFilter =(expectedData, ...filterValue)=>{
         )
     )
     return sciTechData;
-
-
 }
 export default customDataFilter;
