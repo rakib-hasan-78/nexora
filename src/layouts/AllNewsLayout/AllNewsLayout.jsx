@@ -27,6 +27,7 @@ const Card =lazy(()=> import("../../components/basic/Card/Card"));
 import ErrorBoundary from './../../components/basic/Error/ErrorBoundary/ErrorBoundary';
 import CardErrorFallback from "../../components/basic/Error/CardErrorFallback/CardErrorFallback";
 import NewsCardSkeleton from "../../components/Skeletons/NewsCardSkeleton/NewsCardSkeleton";
+import EmptyContent from './../../components/basic/EmptyContent/EmptyContent';
 
 
 const AllNewsLayout = () => {
@@ -125,8 +126,9 @@ const AllNewsLayout = () => {
 
                         </div>
 
-
                         {/* News cards */}
+                        {
+                        search.length > 0 ?
                         <div className="w-full min-w-0 mt-8 md:mt-12 lg:mt-18 flex flex-col gap-3.5 bg-linear-to-tl from-gray-800 via-slate-700 to-zinc-800 rounded-xl md:rounded-2xl shadow-2xl border border-white/10 p-3 sm:p-4 md:p-6">
 
                          <div className='w-full py-6'>
@@ -149,7 +151,13 @@ const AllNewsLayout = () => {
                                 </ErrorBoundary>
                             ))}
 
+                        </div> 
+                        :
+                        <div className="animate-fade-in">
+                        <EmptyContent title={searchNews} />
                         </div>
+
+                        }
 
 
                         {/* Load more / Load less */}

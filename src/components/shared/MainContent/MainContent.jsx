@@ -29,15 +29,19 @@ const MainContent = () => {
         
             <MiddleContent 
             title={`science & technology`} 
-            newsData={sciTechData} />
+            newsData={sciTechData}
+            linkAddress={`/tech&sci`}
+             />
 
             <MiddleContent
             title={'well-being'}
             newsData={wellBeingData}
+            linkAddress={`/well-being`}
              />
              <MiddleContent 
              title={'sports'}
              newsData={sportsDataFilter}
+             linkAddress={`/sports`}
               />
         </div>
     );

@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import { BsArrowRight } from "react-icons/bs";
 
 
-const MiddleContent = ({title,newsData}) => {
+const MiddleContent = ({title,newsData, linkAddress}) => {
     
     return (
         <div className='w-full h-auto overflow-hidden'>
@@ -14,7 +14,7 @@ const MiddleContent = ({title,newsData}) => {
 
                 <div className=" flex items-center justify-between w-11/12 mx-auto">
                     <h2 className='3xs:text-sm lg:text-2xl font-bold text-slate-300 3xs:w-8/12 lg:w-auto'>{title}</h2>
-                    <Link>
+                    <Link to={linkAddress}>
                     <span className='flex items-center gap-2 text-slate-200 font-light 3xs:text-xs lg:text-base'>
                     see all
                     <BsArrowRight />

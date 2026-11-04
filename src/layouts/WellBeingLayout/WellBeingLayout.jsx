@@ -17,6 +17,7 @@ const Card = lazy(() => import("./../../components/basic/Card/Card"));
 import HomeLeftBar from './../../components/shared/HomeLeftBar/HomeLeftBar';
 import AsideLogin from './../../components/shared/AsideLogin/AsideLogin';
 const Promotion = lazy(()=>import('./../../components/shared/Promotion/Promotion'));
+import EmptyContent from './../../components/basic/EmptyContent/EmptyContent';
 
 const WellBeingLayout = () => {
   const {
@@ -69,14 +70,14 @@ const WellBeingLayout = () => {
                 setSearchNews={setSearchNews}
               />
             </div>
-            {searchNews.length === 0 && (
+            {wellbeingSearchHandler.length > 0 ? 
               <div className="news-card-bg">
                 {/* content title */}
                 <div className="w-full py-6">
                   <h2 className="text-slate-300/80 font-bold text-center text-3xl">
-                    Nexora News: wellbeing{" "}
-                    <span className="text-pink-600">
-                      ({wellbeingSearchHandler.length})
+                    Nexora News: wellbeing {''}
+                    <span className="text-pink-600" >
+                       ({wellbeingSearchHandler.length})
                     </span>
                   </h2>
                 </div>
@@ -92,7 +93,7 @@ const WellBeingLayout = () => {
                 ))}
                 {/* load more button  */}
                 <div className="w-full py-10 flex items-center justify-center">
-                  {wellbeingDisplayHandler.length >= 8 && (
+                  {wellbeingSearchHandler.length > 8 && (
                     <button
                       onClick={loadMoreHandler}
                       type="button"
@@ -112,7 +113,11 @@ const WellBeingLayout = () => {
                   )}
                 </div>
               </div>
-            )}
+              :
+              <div className="animate-fade-in">
+                <EmptyContent title={searchNews} />
+              </div>
+            }
           </section>
           {/* right sidebar */}
           <aside className="col-span-1 lg:col-span-3 py-2 lg:sticky lg:top-5 lg:h-fit min-w-0">

@@ -15,6 +15,7 @@ const Card = lazy(()=>import('./../../components/basic/Card/Card'));
 const Promotion = lazy(()=>import('../../components/shared/Promotion/Promotion'))
 import HomeLeftBar from './../../components/shared/HomeLeftBar/HomeLeftBar';
 import AsideLogin from './../../components/shared/AsideLogin/AsideLogin';
+import EmptyContent from './../../components/basic/EmptyContent/EmptyContent';
 
 const TechAndSciLayout = () => {
 
@@ -70,6 +71,8 @@ const TechAndSciLayout = () => {
                         newsData={searchData}
                          />
                         </div>
+                        {
+                            searchData.length>0 ?
                         <div className='news-card-bg'>
                         <div className='w-full py-6'>
                             <h2 className='text-slate-300/80 font-bold text-center text-3xl'>Nexora News: tech & sci <span className='text-pink-600'>({searchData.length})</span></h2>
@@ -113,6 +116,12 @@ const TechAndSciLayout = () => {
                         }
                         </div>
                         </div>
+                        :
+                        <div className='animate-fade-in'>
+                            <EmptyContent title={searchNews} />
+                        </div>
+
+                        }
                     </section>
                     {/* left-side bar */}
                     <aside className='col-span-1 lg:col-span-3 py-2 lg:sticky lg:top-5 lg:h-fit min-w-0'>

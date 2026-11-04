@@ -25,7 +25,7 @@ const router = createBrowserRouter([
                 Component: TechAndSci,
             },
             {
-                path:'well-being',
+                path:'/well-being',
                 Component: WellBeing,
             },
             {
