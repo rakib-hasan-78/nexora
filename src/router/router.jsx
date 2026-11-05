@@ -6,6 +6,7 @@ import AllNews from '../pages/AllNews/AllNews';
 import TechAndSci from '../pages/TechAndSci/TechAndSci';
 import WellBeing from '../pages/WellBeing/WellBeing';
 import Sports from '../pages/Sports/Sports';
+import Contact from '../pages/Contact/Contact';
 
 const router = createBrowserRouter([
     {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
             {
                 path:'/sports',
                 Component:Sports,
+            },
+            {
+                path:'/contact',
+                Component: Contact,
             }
         ]
     }
