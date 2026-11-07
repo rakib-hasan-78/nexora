@@ -13,7 +13,7 @@ const ContactLayout = () => {
                     button={false}
                      />
                 </section>
-                hello world
+                hello
             </main>
         </section>
     );
