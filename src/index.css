@@ -78,7 +78,7 @@
 }
 @layer components{
   .primary-bg-gradient {
-    @apply bg-gradient-to-r from-zinc-500 via-stone-400 to-slate-500;
+    @apply bg-gradient-to-r from-zinc-500 hover:from-slate-500 via-stone-400 hover:via-stone-500 to-slate-500 hover:to-zinc-500 delay-150 transition-all;
   }
 
   .link-btn{
