@@ -3,6 +3,7 @@ import React from 'react';
 import Hero from './../../components/basic/Hero/Hero';
 import ContactForm from './../../components/basic/ContactForm/ContactForm';
 import ContactInstruction from './../../components/basic/ContactInstruction/ContactInstruction';
+import ContactMap from './../../components/basic/ContactMap/ContactMap';
 
 const ContactLayout = () => {
   return (
@@ -54,6 +55,8 @@ const ContactLayout = () => {
             </div>
 
           </div>
+
+          <ContactMap />
 
         </section>
 
