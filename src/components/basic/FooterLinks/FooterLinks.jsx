@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router';
-import { FaFacebookF, FaXTwitter, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa6";
 import footerImage from '../../../assets/footer-image.png'
+import SocialMedia from './../SocialMedia/SocialMedia';
 const FooterLinks = () => {
   return (
     <section className="footer sm:footer-horizontal text-slate-200 flex  3xs:flex-col lg:flex-row pb-10">
@@ -19,23 +19,7 @@ const FooterLinks = () => {
           the latest & the unbiased news.
         </p>
       </div>
-        <div className="flex items-center 3xs:space-x-1.5 lg:space-x-3 mt-2">
-            <Link className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-800 text-slate-200 transition-all hover:bg-slate-200 hover:text-slate-800 border border-slate-500 hover:border-slate-800 inset-0 shadow-md ease-in-out delay-150">
-                <FaFacebookF />
-            </Link>
-            <Link className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-800 text-slate-200 transition-all hover:bg-slate-200 hover:text-slate-800 border border-slate-500 hover:border-slate-800 inset-0 shadow-md ease-in-out delay-150">
-                <FaXTwitter />
-            </Link>
-            <Link className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-800 text-slate-200 transition-all hover:bg-slate-200 hover:text-slate-800 border border-slate-500 hover:border-slate-800 inset-0 shadow-md ease-in-out delay-150">
-                <FaInstagram />
-            </Link>
-            <Link className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-800 text-slate-200 transition-all hover:bg-slate-200 hover:text-slate-800 border border-slate-500 hover:border-slate-800 inset-0 shadow-md ease-in-out delay-150">
-                <FaTiktok />
-            </Link>
-            <Link className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-800 text-slate-200 transition-all hover:bg-slate-200 hover:text-slate-800 border border-slate-500 hover:border-slate-800 inset-0 shadow-md ease-in-out delay-150">
-                <FaYoutube />
-            </Link>
-        </div>
+      <SocialMedia />
       </aside>
       <div className="3xs:w-full lg:w-7/12 flex 3xs:flex-col lg:flex-row 3xs:items-center lg:items-start lg:space-x-28 justify-end">
         <nav className="flex flex-col space-y-2">
