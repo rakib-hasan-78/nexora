@@ -1,9 +1,11 @@
 
 import React from 'react';
+
 import Hero from './../../components/basic/Hero/Hero';
 import ContactForm from './../../components/basic/ContactForm/ContactForm';
 import ContactInstruction from './../../components/basic/ContactInstruction/ContactInstruction';
 import ContactMap from './../../components/basic/ContactMap/ContactMap';
+import PhnAndEmail from './../../components/basic/PhnAndEmail/PhnAndEmail';
 
 const ContactLayout = () => {
   return (
@@ -39,23 +41,37 @@ const ContactLayout = () => {
 
           </div>
 
-          {/* Form and additional information */}
+          {/* Contact form and additional information */}
           <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-4 2xs:gap-5 sm:gap-6 lg:gap-5 xlg:gap-6 items-stretch">
 
             {/* Contact form */}
-            <div className="col-span-1 lg:col-span-7 w-full min-w-0 border border-white/10 rounded-lg 2xs:rounded-xl p-3 2xs:p-4 xs:p-5 sm:p-6 lg:p-5 xlg:p-6 2xl:p-8 shadow-sm bg-linear-to-tl from-gray-800 via-slate-700 to-zinc-800">
+            <div className="col-span-1 lg:col-span-7 w-full min-w-0 flex flex-col border border-white/10 rounded-lg 2xs:rounded-xl p-3 2xs:p-4 xs:p-5 sm:p-6 lg:p-5 xlg:p-6 2xl:p-8 shadow-sm bg-linear-to-tl from-gray-800 via-slate-700 to-zinc-800">
 
               <ContactForm />
 
             </div>
 
             {/* Additional information */}
-            <div className="col-span-1 lg:col-span-5 w-full min-w-0 border border-zinc-200 rounded-lg 2xs:rounded-xl p-3 2xs:p-4 xs:p-5 sm:p-6 lg:p-5 xlg:p-6 2xl:p-8 shadow-sm  bg-linear-to-tl from-gray-800 via-slate-700 to-zinc-800 text-zinc-200">
-            <ContactInstruction />
+            <div className="col-span-1 lg:col-span-5 w-full min-w-0 flex flex-col border border-zinc-200 rounded-lg 2xs:rounded-xl p-3 2xs:p-4 xs:p-5 sm:p-6 lg:p-5 xlg:p-6 2xl:p-8 shadow-sm bg-linear-to-tl from-gray-800 via-slate-700 to-zinc-800 text-zinc-200">
+
+              <ContactInstruction />
+
             </div>
 
           </div>
 
+          {/* Phone and email contact */}
+          <div className="w-full my-8 2xs:my-9 sm:my-10 flex flex-col gap-2 2xs:gap-2.5">
+
+            <h4 className="font-bold text-lg 2xs:text-xl sm:text-2xl text-zinc-900/70">
+              You can also contact us via:
+            </h4>
+
+            <PhnAndEmail />
+
+          </div>
+
+          {/* Interactive world map */}
           <ContactMap />
 
         </section>

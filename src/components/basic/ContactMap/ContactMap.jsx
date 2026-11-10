@@ -14,13 +14,13 @@ const ContactMap = () => {
     <section className="w-full mt-8 2xs:mt-10 sm:mt-12">
 
       {/* Map heading */}
-      <div className="mb-4 2xs:mb-5 flex flex-col items-center justify-center">
-        <h2 className="text-xl 2xs:text-2xl sm:text-3xl font-bold text-zinc-800 capitalize">
-          explore our world
+      <div className="mb-4 2xs:mb-5 lg:my-10 flex flex-col items-center justify-center">
+        <h2 className="text-xl 2xs:text-2xl sm:text-3xl font-bold text-zinc-700/70 capitalize">
+          find us on map
         </h2>
 
-        <p className="text-xs 2xs:text-sm sm:text-base text-zinc-600 mt-2">
-          Discover the world through stories, news and perspectives.
+        <p className="text-xs 2xs:text-sm sm:text-base text-zinc-700/70 mt-2">
+          find out offices worldwide. we operate several countries in international vibes.
         </p>
       </div>
 
