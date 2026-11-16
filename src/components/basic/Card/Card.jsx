@@ -5,7 +5,7 @@ import { Link } from "react-router";
 import Rating from './../Rating/Rating';
 import { MdRemoveRedEye } from "react-icons/md";
 const Card = ({ data }) => {
-  const { title, thumbnail_url, author, details, rating, total_view } = data;
+  const { title, thumbnail_url, author, details, rating, total_view, id } = data;
   const date = new Date(author.published_date);
   return (
     <div className="w-full h-125  flex flex-col items-center justify-center shadow-2xl hover:shadow-2xs ">
@@ -51,7 +51,9 @@ const Card = ({ data }) => {
         </div>
         {/* link button */}
         <div className="w-full lg:py-3 font-semibold z-30">
-        <Link>
+        <Link
+        to={`/news/${id}`}
+        >
         <span className="text-secondary/80 hover:text-secondary/90 ease-in-out delay-75 transition-all 3xs:text-sm lg:text-base">
             read more
         </span>

@@ -1,14 +1,22 @@
-import React, { Suspense } from "react";
+import React, { Suspense, use } from "react";
 import { format } from "date-fns";
 import imageDemo from "../../../assets/demo-card-thumbnail.png";
 import user from "../../../assets/user.png";
 import NewsCardSkeleton from "../../Skeletons/NewsCardSkeleton/NewsCardSkeleton";
 import HomeLeftBar from "../../shared/HomeLeftBar/HomeLeftBar";
-import { Link } from "react-router";
+import { Link, useLoaderData } from "react-router";
+import Card from './../Card/Card';
+import { data } from "../../../../public/allData/allData";
+
 
 
 const NewsDetails = () => {
   const nowDate = "2025-04-22T17:00:00.000Z";
+  const articleData = useLoaderData();
+  const mainData = use(data);
+  const currentTags = articleData.tags;
+  // tag related news
+  // const relatedTaggedNews = mainData.
   return (
     <div className="w-full flex flex-col items-center justify-center">
       <main className="w-10/12 mx-auto flex-1">
@@ -50,12 +58,14 @@ const NewsDetails = () => {
                 {/* details */}
                 <div className="w-full pt-7">
                   <p className="text-lg pr-1.5 font-light">
+address the structur
                     It is encouraging that labour migration from Bangladesh to
                     Malaysia is likely to resume at the end of this month.
                     However, given the history of repeated suspensions, a more
                     important question is whether this renewed initiative will
                     import HomeLeftBar from './../../shared/HomeLeftBar/HomeLeftBar';
-address the structural problems that have long plagued the
+al problems that hav
+e long plagued the
                     recruitment process. Malaysia has suspended labour
                     recruitment from Bangladesh several times: first in the
                     1990s, then between 2008 and 2012, again from 2019 to 2022,
@@ -104,7 +114,13 @@ address the structural problems that have long plagued the
            </Link>
           </div>
         </section>
-        {/*  */}
+        {/* more news section related with similar tags */}
+        <section className="w-9/12 mt-3 px-6">
+          <h2 className="text-2xl font-semibold text-mauve-800/80">related news</h2>
+          <div className="w-full flex flex-wrap">
+            {/* <Card /> */}
+          </div>
+        </section>
       </main>
     </div>
   );

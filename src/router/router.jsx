@@ -7,6 +7,7 @@ import TechAndSci from '../pages/TechAndSci/TechAndSci';
 import WellBeing from '../pages/WellBeing/WellBeing';
 import Sports from '../pages/Sports/Sports';
 import Contact from '../pages/Contact/Contact';
+import NewsDetails from '../components/basic/NewsDetails/NewsDetails';
 
 const router = createBrowserRouter([
     {
@@ -36,6 +37,15 @@ const router = createBrowserRouter([
             {
                 path:'/contact',
                 Component: Contact,
+            },
+            {
+                path:'/news/:id',
+                element:<NewsDetails/>,
+                loader: ({params})=> {
+                    return fetch('/data/news.json')
+                        .then(res=>res.json())
+                        .then(data=>data.find(item=>item.id === params.id))
+                }
             }
         ]
     }

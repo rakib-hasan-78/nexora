@@ -1,10 +1,14 @@
 import React from 'react';
 import defaultNewsImage from '../../../assets/defaultNews.jpg';
+import { Link } from 'react-router';
 
 const NewsToast = ({news}) => {
-    const {thumbnail_url, title} = news
+    const {thumbnail_url, title, id} = news
     return (
-        <div className='3xs:w-11/12 lg:w-full flex items-center justify-start space-x-3 glass-effect cursor-pointer py-4'>
+        <Link
+        to={`/news/${id}`}
+         className='3xs:w-11/12 lg:w-full flex items-center justify-start space-x-3 glass-effect cursor-pointer py-4'>
+         
             <div className='3xs:w-4/10 lg:w-5/10 3xs:h-6 lg:h-10 3xs:rounded-full lg:rounded overflow-hidden'>
                 <img 
                 src={thumbnail_url || defaultNewsImage }
@@ -15,8 +19,9 @@ const NewsToast = ({news}) => {
             <h5 className='line-clamp-1 font-light 3xs:text-[9px] lg:text-sm text-base-100'>
                 {title}
             </h5>
-        </div>
+        </Link>
     );
 };
 
 export default NewsToast;
+
