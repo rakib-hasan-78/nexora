@@ -4,11 +4,11 @@ import { CiBookmark, CiShare2 } from "react-icons/ci";
 import { Link } from "react-router";
 import Rating from './../Rating/Rating';
 import { MdRemoveRedEye } from "react-icons/md";
-const Card = ({ data }) => {
+const Card = ({ data, styleClass }) => {
   const { title, thumbnail_url, author, details, rating, total_view, id } = data;
   const date = new Date(author.published_date);
   return (
-    <div className="w-full h-125  flex flex-col items-center justify-center shadow-2xl hover:shadow-2xs ">
+    <div className={`w-full h-125  flex flex-col items-center justify-center shadow-2xl hover:shadow-2xs ${styleClass} `}>
       {/* card header */}
       <div className="w-full flex items-center justify-between glass-effect rounded-b-none">
         <div className="3xs:w-10/12 lg:w-7/12 flex items-center justify-start space-x-2 z-30">
