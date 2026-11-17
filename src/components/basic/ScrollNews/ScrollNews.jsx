@@ -20,7 +20,7 @@ const ScrollNews = () => {
                         <p
                         className='3xs:text-sm lg:text-lg text-base-200' 
                         key={news.id}>
-                        <Link to={`#`}>
+                        <Link to={`/news/${news.id}`}>
                         {news.title}    
                         </Link>
                         </p>

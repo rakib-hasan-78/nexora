@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router";
 
 const Slide = ({data}) => {
-  const {author, title, details, thumbnail_url} =data
+  const {author, title, details, thumbnail_url, id} =data
   return (
     <div className="relative h-[500px] overflow-hidden rounded-2xl">
       {/* GREEN PANEL */}
@@ -30,6 +30,7 @@ const Slide = ({data}) => {
             </p> <br />
 
             <Link
+            to={`/news/${id}`}
               className="
                         mt-10
                         rounded-full

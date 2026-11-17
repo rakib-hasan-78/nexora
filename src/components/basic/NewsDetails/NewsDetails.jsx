@@ -1,7 +1,7 @@
 
 import { Suspense, use } from "react";
 import { format } from "date-fns";
-import { Link, useLoaderData } from "react-router";
+import { Link, useLoaderData, useNavigate } from "react-router";
 
 import demoImage from "../../../assets/defaultNews.jpg";
 import user from "../../../assets/user.png";
@@ -13,6 +13,7 @@ import Card from "./../Card/Card";
 import { data } from "../../../../public/allData/allData";
 
 const NewsDetails = () => {
+  const navigate = useNavigate();
   const articleData = useLoaderData();
 
   const {
@@ -152,12 +153,12 @@ const NewsDetails = () => {
           {/* Return to all news */}
           <div className="w-full lg:w-8/12 px-1 2xs:px-2 sm:px-4 lg:px-5 mt-6 sm:mt-8">
 
-            <Link
-              to="/all-news"
+            <button
+              onClick={()=>navigate(-1)}
               className="btn btn-secondary w-full 2xs:w-10/12 sm:w-8/12 lg:w-6/12 py-5 2xs:py-6 uppercase font-bold text-xs 2xs:text-sm sm:text-base"
             >
-              Return to all news
-            </Link>
+              Return
+            </button>
 
           </div>
 
