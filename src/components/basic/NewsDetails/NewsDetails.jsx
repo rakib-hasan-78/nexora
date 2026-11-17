@@ -165,7 +165,7 @@ const NewsDetails = () => {
         </section>
 
         {/* Related news section */}
-        <section className="w-full mt-6 sm:mt-8 lg:mt-10 px-1 2xs:px-2 sm:px-4 lg:px-0">
+        <section className="w-full mt-6 sm:my-8 lg:my-10 px-1 2xs:px-2 sm:px-4 lg:px-0">
 
           <h2 className="text-xl 2xs:text-2xl sm:text-3xl font-semibold text-mauve-800/80 capitalize">
             Related news
