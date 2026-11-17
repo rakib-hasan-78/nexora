@@ -45,6 +45,10 @@ const router = createBrowserRouter([
                     return fetch('/data/news.json')
                         .then(res=>res.json())
                         .then(data=>data.find(item=>item.id === params.id))
+                },
+                handle:{
+                    handleFooter: false,
+                    marqueeNews:false 
                 }
             }
         ]

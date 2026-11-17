@@ -13,6 +13,14 @@ const useConfigLayout = () => {
       ?.find((route) => route?.handle?.[key] !== undefined)?.handle?.[key] ??
     true;
 
-  return { isEnabled, isGetConfig };
+  const handleHeader = isEnabled("handleHeader");
+  const handleFooter = isEnabled("handleFooter");
+
+  return {
+    isEnabled,
+    isGetConfig,
+    handleHeader,
+    handleFooter,
+  };
 };
 export default useConfigLayout;

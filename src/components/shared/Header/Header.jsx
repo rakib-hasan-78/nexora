@@ -6,8 +6,11 @@ import NewsDate from "../../basic/NewsDate/NewsDate";
 import ScrollElement from './../../basic/ScrollElement/ScrollElement';
 import PrimaryNav from './../../basic/PrimaryNav/PrimaryNav';
 import AuthenticationNav from './../../basic/AuthenticationNav/AuthenticationNav';
+import useConfigLayout from "../../../CustomHooks/useConfigLayout/useConfigLayout";
 
 const Header = () => {
+  const {isGetConfig} = useConfigLayout();
+  const marqueeNews = isGetConfig('marqueeNews')
   return (
     <div className="w-full flex flex-col items-center content-center">
     {/* first half of header */}
@@ -30,10 +33,21 @@ const Header = () => {
       </div>
       {/* second half of header */}
       {/* marquee */}
+
+      {
+        marqueeNews &&
       <div className="3xs:w-full lg:w-9/12 flex items-center border-slate-700/60  shadow-2xl">
         <ScrollElement />
       </div>  
+
+      }
+
       {/* nav section */}
+
+      {/* handling display content in routes */}
+
+      {
+        marqueeNews &&
       <div className="3xs:w-full lg:w-9/12 h-20 flex items-center justify-end my-6 text-sm">
       <nav className="w-6/12 h-20 py-2 3xs:hidden lg:flex items-center p-1 text-neutral-700/65 font-light">
         <PrimaryNav />
@@ -42,6 +56,8 @@ const Header = () => {
         <AuthenticationNav />
       </nav>
       </div>
+
+      }
     </div>
   );
 };
