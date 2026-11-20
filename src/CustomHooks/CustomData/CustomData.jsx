@@ -20,13 +20,17 @@ const CustomData = ({ children }) => {
     return true;
   };
 
-//  
+//** reading handler 
+const readingHandler = (news) =>{
+    
+}   
 
   const value = {
     bookmark,
     read,
     share,
     bookmarkHandler,
+    readingHandler,
   };
 
   return (
