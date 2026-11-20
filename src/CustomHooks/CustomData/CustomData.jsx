@@ -1,5 +1,9 @@
 import React, { createContext, useContext } from "react";
 import { useState } from "react";
+import {
+  matchedNews,
+  uniqueNewsHandler,
+} from "../../utilities/customDataHandlers/customDataHandlers";
 
 const CustomDataManagement = createContext();
 export const useCustomData = () => useContext(CustomDataManagement);
@@ -9,10 +13,10 @@ const CustomData = ({ children }) => {
   const [read, setRead] = useState([]);
   const [share, setShare] = useState([]);
 
-//   bookmark handler
+  //   bookmark handler
   const bookmarkHandler = (news) => {
     //**  check if the news already in selected bookmark
-    const matchedBookmark = bookmark.find((item) => item.id === news.id);
+    const matchedBookmark = matchedNews(bookmark, news);
 
     if (matchedBookmark) return false;
 
@@ -20,10 +24,16 @@ const CustomData = ({ children }) => {
     return true;
   };
 
-//** reading handler 
-const readingHandler = (news) =>{
-    
-}   
+  //** reading handler
+  const readingHandler = (news) => {
+    uniqueNewsHandler(read, setRead, news);
+  };
+
+  // ** sharing handler
+
+  const sharingHandler = (news) => {
+    uniqueNewsHandler(share, setShare, news);
+  };
 
   const value = {
     bookmark,
@@ -31,6 +41,7 @@ const readingHandler = (news) =>{
     share,
     bookmarkHandler,
     readingHandler,
+    sharingHandler,
   };
 
   return (
