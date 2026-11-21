@@ -60,7 +60,7 @@ const PrimaryNav = () => {
             </NavLink>
 
             <NavLink
-            to={`/dashboard`}
+            to={`/auth/dashboard`}
             className={({isActive})=>
             isActive ?
             `text-pink-500 font-bold` :
